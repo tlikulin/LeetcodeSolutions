@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    int trap(vector<int>& height) {
+    int trap(std::vector<int>& height) {
         //initialisation
         int size = static_cast<int>(height.size());
         if (size <= 2) return 0;

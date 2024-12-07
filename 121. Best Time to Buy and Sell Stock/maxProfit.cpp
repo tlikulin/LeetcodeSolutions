@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    int maxProfit(vector<int>& prices) {
+    int maxProfit(std::vector<int>& prices) {
         int max = 0;
         int min_price = prices[0];
         int size = prices.size();

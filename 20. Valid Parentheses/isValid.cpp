@@ -1,7 +1,10 @@
+#include <string>
+#include <stack>
+
 class Solution {
 public:
-    bool isValid(string s) {
-        stack<char> stk;
+    bool isValid(std::string s) {
+        std::stack<char> stk;
         for (char c : s) {
             if (stk.empty())
                 stk.push(c);

@@ -1,8 +1,11 @@
+#include <vector>
+#include <algorithm>
+
 class Solution {
 public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        vector<vector<int>> res;
+    std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
+        std::sort(nums.begin(), nums.end());
+        std::vector<std::vector<int>> res;
         int size = static_cast<int>(nums.size());
         for (int i = 0; i < size - 2; ++i) {
             if (nums[i] > 0)

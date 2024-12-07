@@ -1,3 +1,5 @@
+#include <string>
+
 class Solution {
 public:
     int conv(char c) {
@@ -20,7 +22,7 @@ public:
                         return 0;
                 }
     }
-    int romanToInt(string s) {
+    int romanToInt(std::string s) {
         
     
         int output = 0;

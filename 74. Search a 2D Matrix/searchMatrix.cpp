@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+    bool searchMatrix(std::vector<std::vector<int>>& matrix, int target) {
         int rows = static_cast<int>(matrix.size());
         int columns = static_cast<int>(matrix[0].size());
         int left = 0;

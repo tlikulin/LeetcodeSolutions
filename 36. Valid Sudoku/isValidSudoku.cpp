@@ -1,7 +1,10 @@
+#include <vector>
+#include <unordered_set>
+
 class Solution {
 public:
-    bool isValidSudoku(vector<vector<char>>& board) {
-        unordered_set<char> hash;
+    bool isValidSudoku(std::vector<std::vector<char>>& board) {
+        std::unordered_set<char> hash;
         char item;
         for (int i = 0; i < 9; ++i) {
             for (int j = 0; j < 9; ++j) {

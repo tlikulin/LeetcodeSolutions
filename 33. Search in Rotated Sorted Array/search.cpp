@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    int search(vector<int>& nums, int target) {
+    int search(std::vector<int>& nums, int target) {
         auto n = static_cast<int>(nums.size());
         int L = 0;
         int R = n - 1;
