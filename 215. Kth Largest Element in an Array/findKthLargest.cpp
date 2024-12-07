@@ -1,7 +1,10 @@
+#include <queue>
+#include <vector>
+
 class Solution {
 public:
-    int findKthLargest(vector<int>& nums, int k) {
-        priority_queue<int> maxHeap (nums.begin(), nums.end());
+    int findKthLargest(std::vector<int>& nums, int k) {
+        std::priority_queue<int> maxHeap (nums.begin(), nums.end());
 
         while (k > 1) {
             maxHeap.pop();

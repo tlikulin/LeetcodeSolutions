@@ -1,8 +1,10 @@
+#include <algorithm>
+
 class Solution {
 public:
     bool isPerfectSquare(int num) {
         int left = 1;
-        int right = min(num, 46340);
+        int right = std::min(num, 46340);
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (mid*mid == num)

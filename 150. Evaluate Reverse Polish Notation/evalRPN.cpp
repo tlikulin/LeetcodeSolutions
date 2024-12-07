@@ -1,9 +1,13 @@
+#include <vector>
+#include <string>
+#include <stack>
+
 class Solution {
 public:
-    int evalRPN(vector<string>& tokens) {
-        stack<int> stk;
+    int evalRPN(std::vector<std::string>& tokens) {
+        std::stack<int> stk;
         int num1; int num2;
-        for (string const& op : tokens) {
+        for (const std::string& op : tokens) {
             if (op == "+") {
                 num2 = stk.top(); stk.pop();
                 num1 = stk.top(); stk.pop();

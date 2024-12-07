@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    bool canPlaceFlowers(vector<int>& flowerbed, int n) {
+    bool canPlaceFlowers(std::vector<int>& flowerbed, int n) {
         if (!n) return true;
         auto size = static_cast<int>(flowerbed.size());
         for (int i = 0; i < size; ++i) {

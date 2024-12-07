@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    int findMaxConsecutiveOnes(vector<int>& nums) {
+    int findMaxConsecutiveOnes(std::vector<int>& nums) {
         int current_max = 0;
         int current_score = 0;
         for (int i : nums) {

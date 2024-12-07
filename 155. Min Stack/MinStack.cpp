@@ -1,13 +1,16 @@
+#include <stack>
+#include <algorithm>
+
 class MinStack {
 private:
-    stack<int> data_;
-    stack<int> minStk_;
+    std::stack<int> minStk_;
+    std::stack<int> data_;
 public:
     MinStack() { }
     
     void push(int val) {
         data_.push(val);
-        minStk_.push(minStk_.empty() ? val : min(minStk_.top(), val));
+        minStk_.push(minStk_.empty() ? val : std::min(minStk_.top(), val));
     }
     
     void pop() {

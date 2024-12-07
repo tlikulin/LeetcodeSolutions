@@ -1,6 +1,9 @@
+#include <vector>
+#include <algorithm>
+
 class Solution {
 public:
-    int minSubArrayLen(int target, vector<int>& nums) {
+    int minSubArrayLen(int target, std::vector<int>& nums) {
         auto n = nums.size();
         int L = 0;
         int minLen = n + 1;
@@ -9,7 +12,7 @@ public:
         for (int R = 0; R < n; ++R) {
             subsum += nums[R];
             while (subsum >= target) {
-                minLen = min(minLen, R-L+1);
+                minLen = std::min(minLen, R-L+1);
                 subsum -= nums[L];
                 ++L;
             }

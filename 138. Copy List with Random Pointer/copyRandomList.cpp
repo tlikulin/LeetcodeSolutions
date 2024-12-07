@@ -1,5 +1,5 @@
-/*
-// Definition for a Node.
+#include <unordered_map>
+
 class Node {
 public:
     int val;
@@ -8,16 +8,15 @@ public:
     
     Node(int _val) {
         val = _val;
-        next = NULL;
-        random = NULL;
+        next = nullptr;
+        random = nullptr;
     }
 };
-*/
 
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
-        unordered_map<Node*, Node*> oldToNew {{nullptr, nullptr}};
+        std::unordered_map<Node*, Node*> oldToNew {{nullptr, nullptr}};
         Node* it = head;
 
         while (it) {

@@ -1,18 +1,21 @@
-#include "Header.h"
-using namespace std;
+#include <vector>
+#include <string>
 
-vector<string> Solution::fizzBuzz(int n) {
-    vector<string> answer;
+class Solution {
+public:
+    std::vector<std::string> fizzBuzz(int n) {
+        std::vector<std::string> answer;
 
-    for (int i = 1; i <= n; i++) {
-        if (i % 3 == 0) {
-            if (i % 5 == 0) answer.emplace_back("FizzBuzz");
-			else answer.emplace_back("Fizz");
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0) {
+                if (i % 5 == 0) answer.emplace_back("FizzBuzz");
+                else answer.emplace_back("Fizz");
+            }
+            else if (i % 5 == 0) answer.emplace_back("Buzz");
+            else answer.emplace_back(std::to_string(i));
+
         }
-        else if (i % 5 == 0) answer.emplace_back("Buzz");
-		else answer.emplace_back(to_string(i));
 
+        return answer;
     }
-
-    return answer;
-}
+};

@@ -1,7 +1,10 @@
+#include <vector>
+#include <unordered_set>
+
 class Solution {
 public:
-    int longestConsecutive(vector<int>& nums) {
-        unordered_set<int> hashtable(nums.begin(), nums.end());
+    int longestConsecutive(std::vector<int>& nums) {
+        std::unordered_set<int> hashtable(nums.begin(), nums.end());
         int max = 0;
         int count = 1;
         for (int const& i : hashtable) {

@@ -1,6 +1,8 @@
+#include <string>
+
 class Solution {
 public:
-    bool isPalindrome(string& s) {
+    bool isPalindrome(std::string& s) {
         int L = 0;
         int R = s.size() - 1;
         while (L < R) {

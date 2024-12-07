@@ -1,7 +1,10 @@
+#include <vector>
+#include <unordered_set>
+
 class Solution {
 public:
-    bool containsDuplicate(vector<int>& nums) {
-        unordered_set<int> set;
+    bool containsDuplicate(std::vector<int>& nums) {
+        std::unordered_set<int> set;
         for (int const& i : nums)
             if (set.find(i) == set.end())
                 set.insert(i);

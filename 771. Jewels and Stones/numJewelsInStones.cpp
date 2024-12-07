@@ -1,7 +1,10 @@
+#include <string>
+#include <unordered_set>
+
 class Solution {
 public:
-    int numJewelsInStones(string jewels, string stones) {
-        unordered_set<char> is_jewel;
+    int numJewelsInStones(std::string jewels, std::string stones) {
+        std::unordered_set<char> is_jewel;
         for (auto s : jewels)
             is_jewel.insert(s);
         int count = 0;

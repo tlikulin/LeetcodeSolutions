@@ -1,6 +1,9 @@
+#include <vector>
+#include <algorithm>
+
 class Solution {
 public:
-    int longestOnes(vector<int>& nums, int k) {
+    int longestOnes(std::vector<int>& nums, int k) {
         auto n = static_cast<int>(nums.size());
         int L = 0; int R = 0;
         int maxCount = 0;
@@ -10,14 +13,14 @@ public:
                 if (k > 0) {
                     --k;
                 } else {
-                    maxCount = max(maxCount, R - L);
+                    maxCount = std::max(maxCount, R - L);
                     while (nums[L] == 1) ++L;
                     ++L;
                 }
             }
         }
 
-        maxCount = max(maxCount, R - L);
+        maxCount = std::max(maxCount, R - L);
         return maxCount;
     }
 };

@@ -1,7 +1,10 @@
+#include <array>
+#include <string>
+
 class Trie {
 private:
     struct TrieNode {
-        array<TrieNode*, 26> next{};
+        std::array<TrieNode*, 26> next{};
         bool endOfWord = false;
     };
 
@@ -9,7 +12,7 @@ private:
 public:
     Trie() = default;
 
-    void insert(string word) {
+    void insert(std::string word) {
         TrieNode* ptr = root;
 
         for (char c : word) {
@@ -23,7 +26,7 @@ public:
         ptr->endOfWord = true;
     }
 
-    bool search(string word) {
+    bool search(std::string word) {
         TrieNode* ptr = root;
 
         for (char c : word) {
@@ -34,7 +37,7 @@ public:
         return ptr->endOfWord;
     }
 
-    bool startsWith(string prefix) {
+    bool startsWith(std::string prefix) {
         TrieNode* ptr = root;
 
         for (char c : prefix) {

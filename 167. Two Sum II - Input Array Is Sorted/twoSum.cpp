@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& numbers, int target) {
+    std::vector<int> twoSum(std::vector<int>& numbers, int target) {
         int L = 0;
         int R = static_cast<int>(numbers.size()) - 1;
         while (L < R) {

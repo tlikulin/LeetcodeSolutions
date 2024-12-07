@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    int findNumbers(vector<int>& nums) {
+    int findNumbers(std::vector<int>& nums) {
         int count = 0;
         for (int i : nums) {
             int digits = 0;

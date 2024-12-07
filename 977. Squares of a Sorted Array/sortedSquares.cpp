@@ -1,7 +1,9 @@
+#include <vector>
+
 class Solution {
 public:
-    vector<int> sortedSquares(vector<int>& nums) {
-        vector<int> result;
+    std::vector<int> sortedSquares(std::vector<int>& nums) {
+        std::vector<int> result;
         for (int& i : nums) {
             i *= i;
             result.push_back(0);

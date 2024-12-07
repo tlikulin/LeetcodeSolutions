@@ -1,7 +1,10 @@
+#include <string>
+#include <unordered_map>
+
 class Solution {
 public:
-    bool canConstruct(string& ransomNote, string& magazine) {
-        unordered_map<char, int> source, target;
+    bool canConstruct(std::string& ransomNote, std::string& magazine) {
+        std::unordered_map<char, int> source, target;
         for (char c = 97; c <= 122; c++) {
             source[c] = 0;
             target[c] = 0;

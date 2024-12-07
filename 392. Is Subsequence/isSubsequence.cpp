@@ -1,6 +1,8 @@
+#include <string>
+
 class Solution {
 public:
-    bool isSubsequence(string s, string t) {
+    bool isSubsequence(std::string s, std::string t) {
         if (s.empty()) return true;
         int s_ptr = 0;
         int t_ptr = 0;

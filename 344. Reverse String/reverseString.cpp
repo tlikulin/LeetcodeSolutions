@@ -1,11 +1,14 @@
+#include <vector>
+#include <algorithm>
+
 class Solution {
 public:
-    void reverseString(vector<char>& s) {
+    void reverseString(std::vector<char>& s) {
         int L = 0;
         int R = s.size() - 1;
 
         while (L < R) {
-            swap(s[L], s[R]);
+            std::swap(s[L], s[R]);
             ++L;
             --R;
         } 

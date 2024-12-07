@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    int findMin(vector<int>& nums) {
+    int findMin(std::vector<int>& nums) {
         int L = 0;
         int R = static_cast<int>(nums.size()) - 1;
         while (L < R) {

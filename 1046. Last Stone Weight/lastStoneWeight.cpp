@@ -1,7 +1,10 @@
+#include <vector>
+#include <queue>
+
 class Solution {
 public:
-    int lastStoneWeight(vector<int>& stones) {
-        priority_queue<int> maxHeap(stones.begin(), stones.end());
+    int lastStoneWeight(std::vector<int>& stones) {
+        std::priority_queue<int> maxHeap(stones.begin(), stones.end());
         while (maxHeap.size() >= 2) {
             int stone1 = maxHeap.top(); maxHeap.pop();
             int stone2 = maxHeap.top(); maxHeap.pop();

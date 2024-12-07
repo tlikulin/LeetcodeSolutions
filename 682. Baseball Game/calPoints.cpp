@@ -1,8 +1,12 @@
+#include <vector>
+#include <stack>
+#include <string>
+
 class Solution {
 public:
-    int calPoints(vector<string>& operations) {
-        stack<int> stk;
-        for (string const& op : operations) {
+    int calPoints(std::vector<std::string>& operations) {
+        std::stack<int> stk;
+        for (const std::string& op : operations) {
             if (op == "+") {
                 int top = stk.top(); stk.pop();
                 int newTop = top + stk.top();

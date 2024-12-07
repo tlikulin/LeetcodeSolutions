@@ -1,8 +1,10 @@
+#include <vector>
+
 class Solution {
 public:
-    vector<int> productExceptSelf(vector<int>& nums) {
+    std::vector<int> productExceptSelf(std::vector<int>& nums) {
         auto size = (int) nums.size();
-        vector<int> ans(size, 1);
+        std::vector<int> ans(size, 1);
         int temp = 1;
         for (int i = 0; i < size; i++){
             ans[i] *= temp;
